@@ -1,0 +1,22 @@
+<div>
+    <form #submitForm="ngForm" (ngSubmit)="sumOfNumber(submitForm)">
+        <label for="number1">Select a number</label>
+        <input type="number" id="number1" name="number1" ngModel>
+
+        <label for="number2">Select another number</label>
+        <input type="number" id="number2" name="number2" ngModel>
+
+        <button>Add</button>
+
+        <p>Total: {{ total }} </p>
+
+        <p *ngIf="total > 0">Positive</p>
+        <p *ngIf="total < 0">Negative</p>
+        <p *ngIf="total === 0">Zero</p>
+    </form>
+</div>
+
+<div>
+    <li> {{ nameRef.name }} </li>
+    <li> {{ nameRef.checked }} </li>
+</div>
